@@ -12,7 +12,7 @@ class DN_Spider(scrapy.Spider):
   name = "dn_spider"
 
   def start_requests(self):
-    url = "https://www.nydailynews.com/arcio/rss/"
+    url = "https://www.nydailynews.com/rss/"
     yield scrapy.Request(url=url, callback=self.parse)
 
   def parse(self, response):
